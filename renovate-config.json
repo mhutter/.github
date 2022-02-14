@@ -1,23 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    "github>mhutter/.github:renovate/rust-toolchain"
   ],
   "assignees": [
     "mhutter"
-  ],
-  "regexManagers": [
-    {
-      "fileMatch": [
-        "^rust-toolchain\\.toml$"
-      ],
-      "matchStrings": [
-        "channel\\s*=\\s*\"(?<currentValue>[0-9.]+?)\""
-      ],
-      "depNameTemplate": "rust",
-      "lookupNameTemplate": "rust-lang/rust",
-      "datasourceTemplate": "github-releases",
-      "commitMessageTopic": "Rust"
-    }
   ]
 }
