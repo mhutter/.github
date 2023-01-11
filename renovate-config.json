@@ -2,9 +2,16 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base",
-    "github>mhutter/.github//renovate/rust-toolchain"
+    "github>mhutter/.github//renovate/rust-toolchain",
+    ":gitSignOff"
+  ],
+  "labels": [
+    "dependency"
   ],
   "assignees": [
     "mhutter"
+  ],
+  "postUpdateOptions": [
+    "gomodTidy"
   ]
 }
