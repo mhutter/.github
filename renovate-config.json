@@ -3,7 +3,8 @@
   "extends": [
     "config:base",
     "github>mhutter/.github//renovate/rust-toolchain",
-    ":gitSignOff"
+    ":gitSignOff",
+    ":disableDependencyDashboard"
   ],
   "labels": [
     "dependency"
